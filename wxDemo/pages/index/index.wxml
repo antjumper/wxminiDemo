@@ -1,2 +1,6 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="flx_navigationbar"></view>
+<view class="h_buttons">
+<text class="h_text" wx:for="{{navigationItems}}" wx:key="unique_nav" data-idx="{{index}}">
+{{item}}</text>
+</view>

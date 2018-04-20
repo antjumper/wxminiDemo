@@ -1,31 +1,18 @@
-// pages/index/index.js
-// 值为gn、gj、cj、yl、js、ty和other其中之一
-
-const h_btn_flag_arr = [
-  "gn",
-  "gj",
-  "cj",
-  "yl",
-  "js",
-  "ty",
-  "other"
-]
-const h_btn_text_arr = [
-  "国内",
-  "国际",
-  "财经",
-  "娱乐",
-  "军事",
-  "体育",
-  "其他"
-]
+// pages/demo/demo.js
 Page({
-
+  
+  navbarTap: function (e) {
+    console.debug(e);
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  }, 
   /**
    * 页面的初始数据
    */
   data: {
-    navigationItems: h_btn_text_arr
+    navbar: ['战士', '法师', '坦克', 'ADC'],
+    currentTab: 0,
   },
 
   /**
