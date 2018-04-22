@@ -1,5 +1,7 @@
 {
   "window":{
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "red",
+  "backgroundColor":"red"
   }
 }

@@ -1,6 +1,13 @@
 <!--pages/index/index.wxml-->
 <view class="flx_navigationbar"></view>
 <view class="h_buttons">
-<text class="h_text" wx:for="{{navigationItems}}" wx:key="unique_nav" data-idx="{{index}}">
-{{item}}</text>
+<view class="h_text" wx:for="{{navigationItems}}" wx:key="unique_nav" data-idx="{{index}}" bindtap="navbarTap">
+{{item}}
+<view class="h_line" wx:if="{{currentTab==index}}"></view>
 </view>
+<!-- <view class="h_line" wx:for="{{navigationItems}}" wx:key="unique_nav" data-idx="{{index}}"></view> -->
+</view>
+
+
+
+

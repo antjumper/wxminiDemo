@@ -1,27 +1,34 @@
 /* pages/index/index.wxss */
+
 /* 导航栏的布局 */
 .flx_navigationbar{
  width: 750rpx;
- height: 150rpx;
+ height:160rpx;
  background-color: #399DDB;
 }
+
+/*横向buttons  */
 .h_buttons{
-  /* flex:none; */
-  width: 750rpx;
-  background-color: #399DDB;
-  height: 100rpx;
-  display: flex;
-  align-items: flex-start; 
-  /* justify-content:center; */
-  flex-direction: row;
+display: flex;
+flex: none;
+height: 80rpx; 
+background: #399DDB;  
+align-items: center;  
+flex-direction: row;
 }
+
 .h_text{
-  height: 100%;
-  /* line-height:40rpx;   */
-  text-align: center; 
-  font-size: 14px;
-  color: white;
-  background-color: red;
-  flex: auto;
-  /* align-self: center; */
+flex: 1; 
+/* height: 45rpx;  */
+/* line-height: 45rpx;      */
+text-align: center;   
+font-size: 36rpx;
+margin: 0 auto;
+color: red;
+}
+.h_line{
+ width: 30rpx;
+ height: 5rpx;
+ background-color: #A2CEEB;
+ margin:5rpx auto 5rpx auto;   
 }

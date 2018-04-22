@@ -25,8 +25,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navigationItems: h_btn_text_arr
+    navigationItems: h_btn_text_arr,
+    currentTab: 0
   },
+  navbarTap: function (e) {
+    console.debug(e);
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    }) 
+    },
 
   /**
    * 生命周期函数--监听页面加载
