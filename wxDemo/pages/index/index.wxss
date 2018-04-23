@@ -6,7 +6,6 @@
  height:160rpx;
  background-color: #399DDB;
 }
-
 /*横向buttons  */
 .h_buttons{
 display: flex;
@@ -16,19 +15,46 @@ background: #399DDB;
 align-items: center;  
 flex-direction: row;
 }
-
+/*显示的文本 */
 .h_text{
 flex: 1; 
-/* height: 45rpx;  */
-/* line-height: 45rpx;      */
 text-align: center;   
 font-size: 36rpx;
 margin: 0 auto;
 color: red;
 }
+/* 选中时候的短横线 */
 .h_line{
  width: 30rpx;
  height: 5rpx;
  background-color: #A2CEEB;
  margin:5rpx auto 5rpx auto;   
+}
+/* 装载图片控件的容器 */
+.imageContainer{
+  height: 350rpx;
+  width: 750rpx;
+  background-color: red;
+}
+/* 图片view */
+.img{
+  position: relative;
+  margin: 32rpx;
+  width: 686rpx;
+  height: 286rpx;
+  background-color: yellowgreen;
+}
+/* 图片上的热门文字 */
+.tipText{
+ position: absolute;
+ background-color: #B54C42;
+ color: white;
+ font-size: 14rpx;
+ text-align: center;
+ width: 60rpx;
+ height: 30rpx;
+ line-height: 30rpx;
+ border-bottom-left-radius: 15rpx;
+ right: 0rpx;
+ top: 0rpx;
 }
