@@ -5,6 +5,27 @@
  width: 750rpx;
  height:160rpx;
  background-color: #399DDB;
+ /* position: relative; */
+ display: flex;
+ align-items: center;  
+ flex-direction: row;
+}
+/* 头部的图片 */
+.navImage{
+  width: 60rpx;
+  height: 60rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  margin-left: 18rpx;
+}
+/* 头部文字样式 */
+.navImageText{
+ text-align: center;
+ margin-left: 10rpx;
+ font-size: 36rpx;
+ color: rgba(255, 255, 255, 1);
 }
 /*横向buttons  */
 .h_buttons{
@@ -19,9 +40,9 @@ flex-direction: row;
 .h_text{
 flex: 1; 
 text-align: center;   
-font-size: 36rpx;
+font-size: 30rpx;
 margin: 0 auto;
-color: red;
+color: white;
 }
 /* 选中时候的短横线 */
 .h_line{
@@ -49,12 +70,54 @@ color: red;
  position: absolute;
  background-color: #B54C42;
  color: white;
- font-size: 14rpx;
+ font-size: 20rpx;
  text-align: center;
  width: 60rpx;
- height: 30rpx;
- line-height: 30rpx;
+ height: 45rpx;
+ line-height: 45rpx;
  border-bottom-left-radius: 15rpx;
  right: 0rpx;
  top: 0rpx;
+}
+
+/* 新闻列表 */
+.news-item{
+ display: flex;
+ align-items: center;
+ height: 200rpx;
+ width: 686rpx;
+ margin: 0 32rpx;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.item-left{
+  /* flex: 1.8; */
+  width: 526rpx;
+}
+.newsItem-title{
+color: #4D4E50;
+/* height: 40rpx; */
+font-size: 30rpx;
+width: 100%;
+}
+.newsItem-source-date-wapper{
+display: flex;
+align-items: flex-start;
+margin-top: 10rpx;
+width: 100%;
+}
+.newsItem-source{
+color: #90939E;
+font-size: 25rpx;
+}
+.newsItem-date{
+margin-left: 10rpx;
+color: #90939E;
+font-size: 25rpx;
+}
+.newsItem-image{
+/* flex: 1.2; */
+height: 138rpx;
+width: 150rpx;
+margin-left: 10rpx;
+background-color: red;
 }

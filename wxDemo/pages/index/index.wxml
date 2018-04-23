@@ -1,16 +1,43 @@
 <!--pages/index/index.wxml-->
-<view class="flx_navigationbar"></view>
-<view class="h_buttons">
-  <view class="h_text" wx:for="{{navigationItems}}" wx:key="unique_nav" data-idx="{{index}}" bindtap="navbarTap">
-  {{item}}
-  <view class="h_line" wx:if="{{currentTab==index}}"></view>
-  </view>
+<!-- 头部 -->
+<view class="flx_navigationbar">
+  <image class='navImage' 
+  src="/images/navImage.png">
+  </image>
+  <text class="navImageText">快读·资讯</text>
 </view>
-
+<!-- 热门 -->
+<view class="h_buttons">
+  <view class="h_text" wx:for="{{navigationItems}}"
+     wx:key="unique_nav" data-idx="{{index}}"
+      bindtap="navbarTap">{{item}}
+      <view class="h_line" wx:if="{{currentTab==index}}"></view>
+   </view> 
+</view>
+<!-- 容器 -->
 <view class='imageContainer'>
   <image class='img'>
     <text class="tipText">热门</text>
   </image>
+</view>
+<!-- 新闻列表 -->
+<!--左右布局  -->
+<view class='news-item' wx:for="{{newsList}}" wx:key="unique_newsItem" data-idx="{{index}}" bindlongtap='newsItemtap'>
+<!--上下布局  -->
+   <view class='item-left'>
+    <view class='newsItem-title'>{{item.title}}</view>
+    <view class='newsItem-source-date-wapper'>
+      <view class='newsItem-source'>{{item.source}}
+      </view>
+      <view class='newsItem-date'>{{item.date}}</view>
+    </view>
+   </view>
+  
+  <image class='newsItem-image' 
+         src='{{item.firstImage}}'           
+         mode="aspectFill">
+  </image>
+
 </view>
 
 

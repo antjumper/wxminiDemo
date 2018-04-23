@@ -22,11 +22,38 @@ const h_btn_text_arr = [
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据 +":getHours()"+item.date.getMinutes()
    */
   data: {
     navigationItems: h_btn_text_arr,
-    currentTab: 0
+    currentTab: 0,
+    newsList: [{
+      "id": 1523074607642,
+      "title": "清明假期长三角铁路客流堪比春运 上海局增开客车124列",
+      "date": "02:01",
+      "source": "source",
+      "firstImage": "http://inews.gtimg.com/newsapp_bt/0/3203388080/641"},
+      {
+        "id": 1523074607642,
+        "title": "清明假期长三角铁路客流堪比春运 上海局增开客车124列",
+        "date": "02:01",
+        "source": "source",
+        "firstImage": "http://inews.gtimg.com/newsapp_bt/0/3203388080/641"
+      },
+      {
+        "id": 1523074607642,
+        "title": "清明假期长三角铁路客流堪比春运 上海局增开客车124列",
+        "date": "02:01",
+        "source": "source",
+        "firstImage": "http://inews.gtimg.com/newsapp_bt/0/3203388080/641"
+      },
+      {
+        "id": 1523074607642,
+        "title": "清明假期长三角铁路客流堪比春运 上海局增开客车124列",
+        "date": "02:01",
+        "source": "source",
+        "firstImage": "http://inews.gtimg.com/newsapp_bt/0/3203388080/641"
+      }]
   },
   navbarTap: function (e) {
     console.debug(e);
