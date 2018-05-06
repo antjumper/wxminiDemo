@@ -1,0 +1,90 @@
+/* pages/detail/detail.wxss */
+/* 导航栏的布局 */
+.flx_navigationbar{
+ width: 750rpx;
+ height:140rpx;
+ background-color: white;
+ /* position: relative; */
+ display: flex;
+ align-items: center;  
+ flex-direction: row;
+ border-bottom:1rpx solid #6FB7E5; 
+}
+/* 头部的图片 */
+.navImage{
+  width: 40rpx;
+  height: 48rpx;
+  margin-left: 18rpx;
+  margin-top: 30rpx;
+}
+/* 头部文字样式 */
+.navImageText{
+ text-align: center;
+ font-size: 36rpx;
+ margin-top: 30rpx;
+ color: #777687;
+}
+
+.text_title{
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  font-size: 50rpx;
+  color: black;
+  text-align: left;
+}
+.container{
+  position: relative;
+  width: 718rpx;
+  height: 50rpx;
+}
+.source_container{
+position: absolute;
+display: flex;
+align-items: flex-start;
+margin-left: 16rpx;
+height: 100%;
+width: 500rpx;
+background-color: greenyellow;
+margin-bottom: 40rpx;
+}
+.source_container-source{
+color: #90939E;
+font-size: 25rpx;
+}
+.source_container-date{
+margin-left: 10rpx;
+color: #90939E;
+font-size: 25rpx;
+}
+.container-reader{
+position: absolute; 
+color: #90939E;
+font-size: 25rpx;
+text-align: right;
+width: 218rpx;
+margin-left: 516rpx;
+margin-top: 0rpx;
+height: 100%;
+background-color: red;
+}
+/* .text_container{
+margin-top: 40rpx;
+margin-left: 16rpx;
+margin-right: 16rpx;
+} */
+.view_text{
+margin-top: 40rpx;
+margin-left: 16rpx;
+margin-right: 16rpx;
+color: #818185;
+font-size: 30rpx;
+}
+.img{
+  width: 718rpx;
+  height: 458rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+}
+

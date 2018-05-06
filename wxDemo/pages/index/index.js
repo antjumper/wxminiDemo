@@ -1,6 +1,6 @@
 // pages/index/index.js
 // 值为gn、gj、cj、yl、js、ty和other其中之一
-var utils = require('../../utils/util.js')
+// var utils = require('../../utils/util.js')
 const h_btn_flag_arr = [
   "gn",
   "gj",
@@ -36,7 +36,36 @@ Page({
       currentTab: e.currentTarget.dataset.idx
     }) 
     this.getNetworkDataAt(e.currentTarget.dataset.idx)
-    },
+   },
+
+  // newsFirsttap: function (e) {
+  //   console.debug(e);
+
+  //   // let indexAt = e.currentTarget.dataset.firstidx
+  //   // var id = "";
+  //   // if (indexAt === 0) {
+  //   //   id = this.data.firstNews.id;
+  //   // } else {
+  //   //   id = this.data.newsList[indexAt].id
+  //   // }
+  //   // wx.navigateTo({
+  //   //   url: 'pages/detail/detail?id=' + id,
+  //   // })
+
+  // },
+  newsItemtap:function (e) {
+    console.debug(e);
+    let indexAt = e.currentTarget.dataset.idx
+    var id = "";
+    if (indexAt === "0"){
+      id = this.data.firstNews.id;
+    }else{
+      id = this.data.newsList[indexAt].id
+    }
+    wx.navigateTo({
+      url: '../../pages/detail/detail?id='+id,
+    })
+  },
 
   getNetworkDataAt(index,callBlock){
     wx.showToast({
@@ -50,20 +79,6 @@ Page({
         let result = res.data.result
         console.log(result)
         if (result && result.length){
-          // var arr_result = new Array()
-
-          // for (var item in result) {
-          //   var item_dict = {} 
-          //   let time = utils.formatTime(Number(item.date),'h:m:s')
-
-          //   item_dict.id = item.id;
-          //   item_dict.firstImage = item.firstImage
-          //   item_dict.date = item.time
-          //   item_dict.source = item.source
-          //   item_dict.title = item.title
-          //   arr_result.push(item_dict)
-          // }  
-
           let first_new = result[0];
           let news_list = result.slice(1,result.length)
           this.setData({

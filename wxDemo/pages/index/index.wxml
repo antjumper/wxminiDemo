@@ -17,7 +17,7 @@
 <!-- 容器 -->
 <view class='imageContainer'>
   <image class='img' src='{{firstNews.firstImage}}'           
-         mode="aspectFill">
+         mode="aspectFill" data-idx="0" bindtap='newsItemtap'>
     <text class="tipText">热门</text>
     <text class="tipTitle">{{firstNews.title}}</text>
     <text class="tipSourceTime">{{firstNews.source + " " + firstNews.date}}</text>
@@ -25,7 +25,8 @@
 </view>
 <!-- 新闻列表 -->
 <!--左右布局  -->
-<view class='news-item' wx:for="{{newsList}}" wx:key="unique_newsItem" data-idx="{{index}}" bindlongtap='newsItemtap'>
+<view class='news-item' wx:for="{{newsList}}" wx:key="unique_newsItem" data-idx="{{index}}"
+ bindtap='newsItemtap'>
 <!--上下布局  -->
    <view class='item-left'>
     <view class='newsItem-title'>{{item.title}}</view>

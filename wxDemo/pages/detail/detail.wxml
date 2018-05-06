@@ -1,0 +1,33 @@
+<!--pages/detail/detail.wxml-->
+<!-- 头部 -->
+<view class="flx_navigationbar">
+  <image class='navImage' 
+  src="/images/back_black.png">
+  </image>
+  <text class="navImageText">快读·资讯</text>
+</view>
+
+<!-- 新闻部分 -->
+<view class='text_title'>{{title}}</view> 
+
+<!-- 来源 时间 阅读量的container-->
+<view class='container'>
+  <view class='source_container'>
+    <text class='source_container-source'>{{source}}</text> 
+    <text class='source_container-date'>{{date}}</text> 
+  </view>
+  <text class='container-reader'> 阅读 {{readCount}}</text>
+</view>
+
+<!-- 上部文字  
+<view class='view_text'>{{content[0].text}}</view>
+
+<!-- 图片 -->
+<!-- <image class='img' src='{{firstImage}}'           
+         mode="aspectFill"> </image> -->
+
+<!--下部文字  -->
+<!-- <view class='view_text'>{{content[1].text}}</view> --> -->
+<!-- <view class='news-item' wx:for="{{content}}" wx:key="unique_newsItem" data-idx="{{index}}"
+ bindtap='newsItemtap'> -->
+ <view>{{content}}</view>
