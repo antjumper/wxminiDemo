@@ -2,6 +2,7 @@
   "window":{
   "navigationStyle": "custom",
   "navigationBarBackgroundColor": "red",
-  "backgroundColor":"red"
+  "backgroundColor":"red",
+  "enablePullDownRefresh": true
   }
 }

@@ -16,8 +16,11 @@
 </view>
 <!-- 容器 -->
 <view class='imageContainer'>
-  <image class='img'>
+  <image class='img' src='{{firstNews.firstImage}}'           
+         mode="aspectFill">
     <text class="tipText">热门</text>
+    <text class="tipTitle">{{firstNews.title}}</text>
+    <text class="tipSourceTime">{{firstNews.source + " " + firstNews.date}}</text>
   </image>
 </view>
 <!-- 新闻列表 -->
