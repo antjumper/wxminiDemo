@@ -2,9 +2,9 @@
 <!-- 头部 -->
 <view class="flx_navigationbar">
   <image class='navImage' 
-  src="/images/back_black.png">
+  src="/images/back_black.png" bindtap='onTapBack'>
   </image>
-  <text class="navImageText">快读·资讯</text>
+  <text class="navImageText" bindtap='onTapBack'>快读·资讯</text>
 </view>
 
 <!-- 新闻部分 -->
@@ -19,15 +19,8 @@
   <text class='container-reader'> 阅读 {{readCount}}</text>
 </view>
 
-<!-- 上部文字  
-<view class='view_text'>{{content[0].text}}</view>
-
-<!-- 图片 -->
-<!-- <image class='img' src='{{firstImage}}'           
-         mode="aspectFill"> </image> -->
-
-<!--下部文字  -->
-<!-- <view class='view_text'>{{content[1].text}}</view> --> -->
-<!-- <view class='news-item' wx:for="{{content}}" wx:key="unique_newsItem" data-idx="{{index}}"
- bindtap='newsItemtap'> -->
- <view>{{content}}</view>
+ <view class='text_container' wx:for="{{content}}" wx:key="unique_item">
+  <image class="img" src='{{item.src}}' wx:if="{{item.type =='image'}}"> </image>
+  <text class='view_text_p' wx:if="{{item.type =='p'}}">{{item.text}}</text>
+  <text class='view_text_strong' wx:if="{{item.type =='strong'}}">{{item.text}}</text>
+ </view>

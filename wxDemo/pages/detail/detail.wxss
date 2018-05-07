@@ -46,7 +46,6 @@ align-items: flex-start;
 margin-left: 16rpx;
 height: 100%;
 width: 500rpx;
-background-color: greenyellow;
 margin-bottom: 40rpx;
 }
 .source_container-source{
@@ -61,30 +60,29 @@ font-size: 25rpx;
 .container-reader{
 position: absolute; 
 color: #90939E;
-font-size: 25rpx;
+font-size: 28rpx;
 text-align: right;
 width: 218rpx;
 margin-left: 516rpx;
 margin-top: 0rpx;
 height: 100%;
-background-color: red;
 }
-/* .text_container{
+ .text_container{
 margin-top: 40rpx;
-margin-left: 16rpx;
-margin-right: 16rpx;
-} */
-.view_text{
-margin-top: 40rpx;
-margin-left: 16rpx;
-margin-right: 16rpx;
+margin-left: 40rpx;
+margin-right: 40rpx;
+} 
+.view_text_p{
+margin-top: 20rpx;
 color: #818185;
 font-size: 30rpx;
 }
+.view_text_strong{
+color: black;
+font-size: 40rpx;
+}
 .img{
-  width: 718rpx;
+  width: 670rpx;
   height: 458rpx;
-  margin-left: 16rpx;
-  margin-right: 16rpx;
 }
 
