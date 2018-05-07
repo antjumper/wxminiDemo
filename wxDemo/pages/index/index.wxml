@@ -16,7 +16,8 @@
 </view>
 <!-- 容器 -->
 <view class='imageContainer'>
-  <image class='img' src='{{firstNews.firstImage}}'           
+  <image class='img' 
+  src='{{firstNews.firstImage ? firstNews.firstImage:"/images/timg.jpeg"}}' 
          mode="aspectFill" data-idx="0" bindtap='newsItemtap'>
     <text class="tipText">热门</text>
     <text class="tipTitle">{{firstNews.title}}</text>
@@ -38,7 +39,7 @@
    </view>
   
   <image class='newsItem-image' 
-         src='{{item.firstImage}}'           
+         src='{{item.firstImage?item.firstImage:"/images/timg.jpeg"}}'           
          mode="aspectFill">
   </image>
 

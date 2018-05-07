@@ -38,21 +38,6 @@ Page({
     this.getNetworkDataAt(e.currentTarget.dataset.idx)
    },
 
-  // newsFirsttap: function (e) {
-  //   console.debug(e);
-
-  //   // let indexAt = e.currentTarget.dataset.firstidx
-  //   // var id = "";
-  //   // if (indexAt === 0) {
-  //   //   id = this.data.firstNews.id;
-  //   // } else {
-  //   //   id = this.data.newsList[indexAt].id
-  //   // }
-  //   // wx.navigateTo({
-  //   //   url: 'pages/detail/detail?id=' + id,
-  //   // })
-
-  // },
   newsItemtap:function (e) {
     console.debug(e);
     let indexAt = e.currentTarget.dataset.idx
@@ -74,7 +59,8 @@ Page({
       duration: 10000
     }),
     wx.request({
-      url: 'https://test-miniprogram.com/api/news/list?type=' + h_btn_flag_arr[index],
+      url: 'https://test-miniprogram.com/api/news/list?type=' +   
+      h_btn_flag_arr[index],
       success: res => {
         let result = res.data.result
         console.log(result)
@@ -86,10 +72,6 @@ Page({
             firstNews: first_new
           })
         }
-        
-        // this.setNow(result)
-        // this.setHourlyWeather(result)
-        // this.setToday(result)
       },
       complete: () => {
         wx.hideToast()
@@ -108,7 +90,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getNetworkDataAt(this.currentTab,() => {
+    this.getNetworkDataAt(this.data.currentTab,() => {
       wx.stopPullDownRefresh()
     })
   },

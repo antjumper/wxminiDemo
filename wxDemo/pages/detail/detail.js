@@ -31,6 +31,11 @@ Page({
   },
   //获取网络数据
   getNewsDetail(callback){
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 10000
+    }),
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail?id='+this.data.id,
       success: res => {
@@ -39,6 +44,7 @@ Page({
         this.setDetailData(result)
       },
       complete: () => {
+        wx.hideToast()
         callback && callback()
       }
     })
