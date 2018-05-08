@@ -43,26 +43,26 @@
 position: absolute;
 display: flex;
 align-items: flex-start;
-margin-left: 16rpx;
+margin-left: 40rpx;
 height: 100%;
 width: 500rpx;
 margin-bottom: 40rpx;
 }
 .source_container-source{
 color: #90939E;
-font-size: 25rpx;
+font-size: 28rpx;
 }
 .source_container-date{
 margin-left: 10rpx;
 color: #90939E;
-font-size: 25rpx;
+font-size: 28rpx;
 }
 .container-reader{
 position: absolute; 
 color: #90939E;
 font-size: 28rpx;
 text-align: right;
-width: 218rpx;
+width: 194rpx;
 margin-left: 516rpx;
 margin-top: 0rpx;
 height: 100%;
