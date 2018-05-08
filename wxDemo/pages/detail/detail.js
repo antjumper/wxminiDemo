@@ -23,12 +23,12 @@ Page({
     })
     this.getNewsDetail()
   },
-  // 刷新
-  onPullDownRefresh() {
-    this.getNewsDetail(() => {
-      wx.stopPullDownRefresh()
-    })
-  },
+  // 刷新 不需要
+  // onPullDownRefresh() {
+  //   this.getNewsDetail(() => {
+  //     wx.stopPullDownRefresh()
+  //   })
+  // },
   //获取网络数据
   getNewsDetail(callback){
     wx.showToast({

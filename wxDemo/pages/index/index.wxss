@@ -80,7 +80,7 @@ color: white;
 .tipTitle{
   position: absolute;
   bottom: 60rpx;
-  color: #4D4E50;
+  color: white;
   text-align: left;
   margin-left: 10rpx;
   font-size: 25rpx;

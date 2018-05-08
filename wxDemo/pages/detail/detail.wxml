@@ -1,4 +1,6 @@
 <!--pages/detail/detail.wxml-->
+<wxs module="filter" src="detail.wxs"></wxs>
+
 <!-- 头部 -->
 <view class="flx_navigationbar">
   <image class='navImage' 
@@ -8,15 +10,15 @@
 </view>
 
 <!-- 新闻部分 -->
-<view class='text_title'>{{title}}</view> 
+<view class='text_title'>{{filter.transformEmptyString(title)}}</view> 
 
 <!-- 来源 时间 阅读量的container-->
 <view class='container'>
   <view class='source_container'>
-    <text class='source_container-source'>{{source}}</text> 
-    <text class='source_container-date'>{{date}}</text> 
+    <text class='source_container-source'>{{filter.transformEmptyString(source)}}</text> 
+    <text class='source_container-date'>{{filter.formatTime(date)}}</text> 
   </view>
-  <text class='container-reader'> 阅读 {{readCount}}</text>
+  <text class='container-reader'> 阅读 {{filter.transformEmptyString(readCount)}}</text>
 </view>
 
  <view class='text_container' wx:for="{{content}}" wx:key="unique_item">

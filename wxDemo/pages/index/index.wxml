@@ -1,5 +1,7 @@
 <!--pages/index/index.wxml-->
 <!-- 头部 -->
+<wxs module="filter" src="index.wxs"></wxs>
+
 <view class="flx_navigationbar">
   <image class='navImage' 
   src="/images/navImage.png">
@@ -17,11 +19,11 @@
 <!-- 容器 -->
 <view class='imageContainer'>
   <image class='img' 
-  src='{{firstNews.firstImage ? firstNews.firstImage:"/images/timg.jpeg"}}' 
+  src='{{filter.transformEmptySource(firstNews.firstImage)}}' 
          mode="aspectFill" data-idx="0" bindtap='newsItemtap'>
     <text class="tipText">热门</text>
-    <text class="tipTitle">{{firstNews.title}}</text>
-    <text class="tipSourceTime">{{firstNews.source + " " + firstNews.date}}</text>
+    <text class="tipTitle">{{filter.transformEmptyString(firstNews.title)}}</text>
+    <text class="tipSourceTime">{{filter.transformEmptyString(firstNews.source) + " " + filter.formatTime(firstNews.date)}}</text>
   </image>
 </view>
 <!-- 新闻列表 -->
@@ -30,16 +32,16 @@
  bindtap='newsItemtap'>
 <!--上下布局  -->
    <view class='item-left'>
-    <view class='newsItem-title'>{{item.title}}</view>
+    <view class='newsItem-title'>{{filter.transformEmptyString(item.title)}}</view>
     <view class='newsItem-source-date-wapper'>
-      <view class='newsItem-source'>{{item.source}}
+      <view class='newsItem-source'>{{filter.transformEmptyString(item.source)}}
       </view>
-      <view class='newsItem-date'>{{item.date}}</view>
+      <view class='newsItem-date'>{{filter.formatTime(item.date)}}</view>
     </view>
    </view>
   
   <image class='newsItem-image' 
-         src='{{item.firstImage?item.firstImage:"/images/timg.jpeg"}}'           
+         src='{{filter.transformEmptySource(item.firstImage)}}'           
          mode="aspectFill">
   </image>
 

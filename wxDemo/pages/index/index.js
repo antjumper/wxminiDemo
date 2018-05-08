@@ -1,6 +1,6 @@
 // pages/index/index.js
 // 值为gn、gj、cj、yl、js、ty和other其中之一
-// var utils = require('../../utils/util.js')
+var utils = require('../../utils/util.js')
 const h_btn_flag_arr = [
   "gn",
   "gj",
@@ -62,8 +62,10 @@ Page({
       url: 'https://test-miniprogram.com/api/news/list?type=' +   
       h_btn_flag_arr[index],
       success: res => {
+        
         let result = res.data.result
         console.log(result)
+
         if (result && result.length){
           let first_new = result[0];
           let news_list = result.slice(1,result.length)
@@ -79,7 +81,7 @@ Page({
       }
     })
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
