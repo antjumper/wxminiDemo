@@ -26,8 +26,8 @@
 }
 
 .text_title{
-  margin-left: 16rpx;
-  margin-right: 16rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
   margin-top: 40rpx;
   margin-bottom: 40rpx;
   font-size: 50rpx;
